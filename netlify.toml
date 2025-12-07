@@ -1,6 +1,16 @@
 [build]
-    command= "npm run build"
+    command= "npm run test && npm run build"
     publish = "dist"
 
 [context.production.environment]
     NODE_VERSION = "18"
+
+# Configuracion para despliegues de preview (pull request)
+[context.deploy-preview]
+    command = "npm run test && npm run build"
+    publish = "dist"
+
+# Configuracion para la rama de desarrollo
+[context.dev]
+    command = "npm run test && npm run build"
+    publish = "dist"
