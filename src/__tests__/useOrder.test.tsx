@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import useOrder from './hooks/useOrder'
+import useOrder from '../hooks/useOrder'
 
 // mocks de tipos
 type MenuItem = { id: number; name: string; price: number }
