@@ -1,9 +1,8 @@
 import { renderHook, act } from '@testing-library/react'
-import useOrder from '../hooks/useOrder'
+import useOrder from './hooks/useOrder'
 
 // mocks de tipos
 type MenuItem = { id: number; name: string; price: number }
-type OrderItem = MenuItem & { quantity: number }
 
 describe('useOrder hook', () => {
   it('agrega un nuevo item a la orden', () => { // inicializa el hook useOrder para que devuelva un array de ordenes
